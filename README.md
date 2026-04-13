@@ -1,6 +1,6 @@
 # Gerenciador de Gastos Pessoais
 
-![CI](https://github.com/SEU_USUARIO/gastos-pessoais/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/Renatatxr19/Gastos-Pessoais)
 
 ## Descrição do problema
 
@@ -32,7 +32,7 @@ Qualquer pessoa que queira controlar seus gastos de forma simples, diretamente p
 ## Instalação
 
 ```bash
-git clone https://github.com/SEU_USUARIO/gastos-pessoais.git
+git clone https:https://github.com/Renatatxr19/Gastos-Pessoais
 cd gastos-pessoais
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
@@ -81,8 +81,8 @@ ruff check src/
 
 ## Autor
 
-Seu Nome — seu@email.com
+Renata Teixeira - renata.teixeira@sempreceub.com
 
 ## Repositório
 
-https://github.com/SEU_USUARIO/gastos-pessoais
+https://github.com/Renatatxr19/Gastos-Pessoais

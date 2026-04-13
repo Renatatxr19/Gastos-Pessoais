@@ -1,42 +1,66 @@
 # Gerenciador de Gastos Pessoais
 
-## Sobre o projeto
+![CI](https://github.com/SEU_USUARIO/gastos-pessoais/actions/workflows/ci.yml/badge.svg)
 
-Controlar gastos no dia a dia é mais difícil do que parece. Sem um registro claro de onde o dinheiro vai, fica quase impossível economizar ou perceber o que está pesando no bolso — e isso afeta muita gente, especialmente jovens e autônomos. Esse projeto nasceu dessa necessidade: uma ferramenta simples, sem complicação, para quem quer ter mais consciência financeira.
+## Descrição do problema
 
-## O que ele faz
+Muitas pessoas perdem o controle dos próprios gastos por falta de um registro simples e acessível. Sem visibilidade sobre onde o dinheiro é gasto, fica difícil economizar ou identificar despesas desnecessárias — problema especialmente comum entre jovens adultos e trabalhadores autônomos.
 
-- Adiciona gastos com descrição, valor e categoria
-- Lista todos os gastos registrados
-- Filtra por categoria
-- Mostra um resumo com total por categoria e percentual
-- Remove gastos pelo ID
+## Proposta da solução
 
-## Para quem é
+Uma aplicação CLI leve e direta que permite registrar, categorizar e visualizar gastos pessoais, com resumo por categoria e total acumulado. Sem necessidade de internet, conta ou aplicativo externo.
 
-Para qualquer pessoa que queira organizar os próprios gastos de forma prática, sem precisar de aplicativo, conta ou internet.
+## Público-alvo
 
-## Tecnologias
+Qualquer pessoa que queira controlar seus gastos de forma simples, diretamente pelo terminal.
+
+## Funcionalidades
+
+- Adicionar gasto com descrição, valor e categoria
+- Listar todos os gastos registrados
+- Filtrar gastos por categoria
+- Ver resumo visual com total por categoria e percentual
+- Remover um gasto pelo ID
+
+## Tecnologias utilizadas
 
 - Python 3.9+
 - `pytest` — testes automatizados
-- `ruff` — análise estática do código
+- `ruff` — linting e análise estática
 - GitHub Actions — integração contínua (CI)
 
-## Como instalar
+## Instalação
 
 ```bash
-git clone https://github.com/Renatatxr19/Gastos-Pessoais
-cd Gastos-Pessoais
+git clone https://github.com/SEU_USUARIO/gastos-pessoais.git
+cd gastos-pessoais
 python -m venv .venv
-.venv\Scripts\activate  # Linux/Mac: source .venv/bin/activate
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -e ".[dev]"
 ```
 
-## Como executar
+## Execução
 
 ```bash
-python -m src.gui
+python -m src.app
+```
+
+Exemplo de sessão:
+
+```
+==========================================
+   💰  GERENCIADOR DE GASTOS PESSOAIS
+==========================================
+
+------------------------------------------
+  1. Adicionar gasto
+  2. Listar todos os gastos
+  3. Listar por categoria
+  4. Resumo por categoria
+  5. Remover gasto
+  0. Sair
+------------------------------------------
+  Escolha uma opção:
 ```
 
 ## Rodando os testes
@@ -51,14 +75,14 @@ pytest tests/ -v
 ruff check src/
 ```
 
-## Versão
+## Versão atual
 
 `1.0.0`
 
-## Autora
+## Autor
 
-Renata Teixeira — renata.teixeira@sempreceub.com
+Seu Nome — seu@email.com
 
 ## Repositório
 
-https://github.com/Renatatxr19/Gastos-Pessoais
+https://github.com/SEU_USUARIO/gastos-pessoais

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "b9e58963",
+    "descricao": "Alimentação",
+    "valor": 10000.0,
+    "categoria": "Alimentação",
+    "data": "2026-04-12"
+  },
+  {
+    "id": "f8bd547a",
+    "descricao": "gi",
+    "valor": 125.0,
+    "categoria": "Transporte",
+    "data": "2026-04-12"
+  }
+]

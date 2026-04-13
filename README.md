@@ -1,7 +1,5 @@
 # Gerenciador de Gastos Pessoais
 
-![CI](https://github.com/SEU_USUARIO/gastos-pessoais/actions/workflows/ci.yml/badge.svg)
-
 ## Descrição do problema
 
 Muitas pessoas perdem o controle dos próprios gastos por falta de um registro simples e acessível. Sem visibilidade sobre onde o dinheiro é gasto, fica difícil economizar ou identificar despesas desnecessárias — problema especialmente comum entre jovens adultos e trabalhadores autônomos.
@@ -32,8 +30,7 @@ Qualquer pessoa que queira controlar seus gastos de forma simples, diretamente p
 ## Instalação
 
 ```bash
-git clone https://github.com/SEU_USUARIO/gastos-pessoais.git
-cd gastos-pessoais
+git clone https: https://github.com/Renatatxr19/Gastos-Pessoais
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -e ".[dev]"
@@ -81,8 +78,8 @@ ruff check src/
 
 ## Autor
 
-Seu Nome — seu@email.com
+Renata Teixeira - renata.teixeira@sempreceub.com
 
 ## Repositório
 
-https://github.com/SEU_USUARIO/gastos-pessoais
+https://github.com/Renatatxr19/Gastos-Pessoais

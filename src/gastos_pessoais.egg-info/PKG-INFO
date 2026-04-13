@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: gastos-pessoais
+Version: 1.0.0
+Summary: Gerenciador simples de gastos pessoais via CLI
+Author-email: Seu Nome <seu@email.com>
+Requires-Python: >=3.9
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: ruff>=0.4; extra == "dev"

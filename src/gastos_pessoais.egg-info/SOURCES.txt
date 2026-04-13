@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/app.py
+src/gastos.py
+src/gastos_pessoais.egg-info/PKG-INFO
+src/gastos_pessoais.egg-info/SOURCES.txt
+src/gastos_pessoais.egg-info/dependency_links.txt
+src/gastos_pessoais.egg-info/entry_points.txt
+src/gastos_pessoais.egg-info/requires.txt
+src/gastos_pessoais.egg-info/top_level.txt
+tests/test_gastos.py

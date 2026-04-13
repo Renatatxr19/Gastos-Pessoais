@@ -32,7 +32,7 @@ Qualquer pessoa que queira controlar seus gastos de forma simples, diretamente p
 ## Instalação
 
 ```bash
-git clone https:https://github.com/Renatatxr19/Gastos-Pessoais
+git clone https://github.com/Renatatxr19/Gastos-Pessoais
 cd gastos-pessoais
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate

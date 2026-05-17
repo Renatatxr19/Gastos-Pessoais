@@ -1,3 +1,4 @@
+import requests
 from src.gastos import (
     CATEGORIAS,
     adicionar_gasto,
@@ -6,16 +7,38 @@ from src.gastos import (
     resumo_por_categoria,
     total_gastos,
 )
-
+ 
 LINHA = "-" * 42
-
-
+ 
+ 
+def obter_cotacao_dolar() -> str:
+    """Busca a cotação atual do dólar (USD) em reais (BRL) via AwesomeAPI."""
+    try:
+        url = "https://economia.awesomeapi.com.br/json/last/USD-BRL"
+        response = requests.get(url, timeout=5)
+        response.raise_for_status()
+        dados = response.json()
+        return float(dados["USDBRL"]["bid"])
+    except requests.exceptions.ConnectionError:
+        return None
+    except requests.exceptions.Timeout:
+        return None
+    except (requests.exceptions.HTTPError, KeyError, ValueError):
+        return None
+ 
+ 
 def cabecalho():
+    cotacao = obter_cotacao_dolar()
     print("\n" + "=" * 42)
     print("   💰  GERENCIADOR DE GASTOS PESSOAIS")
     print("=" * 42)
-
-
+    if cotacao is not None:
+        print(f"   💵  Dólar hoje: R$ {cotacao:.2f}")
+    else:
+        print("   💵  Cotação do dólar indisponível")
+    print("=" * 42)
+ 
+ 
 def menu_principal():
     print(f"\n{LINHA}")
     print("  1. Adicionar gasto")
@@ -26,8 +49,8 @@ def menu_principal():
     print("  0. Sair")
     print(LINHA)
     return input("  Escolha uma opção: ").strip()
-
-
+ 
+ 
 def escolher_categoria() -> str:
     print("\nCategorias disponíveis:")
     for i, cat in enumerate(CATEGORIAS, 1):
@@ -37,8 +60,8 @@ def escolher_categoria() -> str:
         if escolha.isdigit() and 1 <= int(escolha) <= len(CATEGORIAS):
             return CATEGORIAS[int(escolha) - 1]
         print("  Opção inválida. Tente novamente.")
-
-
+ 
+ 
 def exibir_gastos(gastos: list[dict]):
     if not gastos:
         print("\n  Nenhum gasto encontrado.")
@@ -52,8 +75,8 @@ def exibir_gastos(gastos: list[dict]):
         )
     print(LINHA + "-" * 14)
     print(f"  Total: R$ {total_gastos(gastos):.2f}")
-
-
+ 
+ 
 def fluxo_adicionar():
     print(f"\n{LINHA}")
     print("  NOVO GASTO")
@@ -73,23 +96,23 @@ def fluxo_adicionar():
         print(f"\n  Gasto adicionado com sucesso! ID: {gasto['id']}")
     except ValueError as e:
         print(f"\n  Erro: {e}")
-
-
+ 
+ 
 def fluxo_listar():
     gastos = listar_gastos()
     print(f"\n{LINHA}")
     print("  TODOS OS GASTOS")
     exibir_gastos(gastos)
-
-
+ 
+ 
 def fluxo_listar_categoria():
     categoria = escolher_categoria()
     gastos = listar_gastos(categoria)
     print(f"\n{LINHA}")
     print(f"  GASTOS — {categoria.upper()}")
     exibir_gastos(gastos)
-
-
+ 
+ 
 def fluxo_resumo():
     gastos = listar_gastos()
     if not gastos:
@@ -106,8 +129,8 @@ def fluxo_resumo():
         print(f"  {cat:<14} R$ {val:>8.2f}  {barra} {pct:.0f}%")
     print(LINHA)
     print(f"  TOTAL GERAL:   R$ {total:.2f}")
-
-
+ 
+ 
 def fluxo_remover():
     gastos = listar_gastos()
     exibir_gastos(gastos)
@@ -118,8 +141,8 @@ def fluxo_remover():
         print("  Gasto removido com sucesso.")
     else:
         print("  ID não encontrado.")
-
-
+ 
+ 
 def main():
     cabecalho()
     acoes = {
@@ -138,7 +161,7 @@ def main():
             acoes[opcao]()
         else:
             print("  Opção inválida.")
-
-
+ 
+ 
 if __name__ == "__main__":
     main()

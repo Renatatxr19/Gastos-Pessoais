@@ -1,5 +1,5 @@
 # 💰 Gerenciador de Gastos Pessoais
-
+[![CI Workflow](https://github.com/Renatatxr19/Gastos-Pessoais/actions/workflows/ci.yml/badge.svg)](https://github.com/Renatatxr19/Gastos-Pessoais/actions)
 ---
 
 ## 🔗 Deploy
@@ -59,6 +59,22 @@ Qualquer pessoa que queira controlar seus gastos de forma simples diretamente pe
 | API | Endpoint | Dados |
 |-----|----------|------|
 | AwesomeAPI Economia | https://economia.awesomeapi.com.br/json/last/USD-BRL | Cotação atual do dólar em reais |
+
+---
+
+## 🧪 Suíte de Testes Automatizados
+
+A aplicação conta com uma cobertura completa de testes automatizados utilizando o `pytest`, totalizando **25 cenários mapeados**:
+
+1. **Testes de Unidade**
+2. **Testes de Integração da API**
+3. **Testes de Integração do Banco de Dados**
+
+---
+
+## 🚀 Integração Contínua (GitHub Actions)
+
+A pipeline automatizada foi configurada para validar cada commit enviado ao repositório de forma independente.
 
 ---
 

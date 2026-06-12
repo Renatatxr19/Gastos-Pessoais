@@ -23,4 +23,5 @@ select = ["E", "F", "W", "I"]
 testpaths = ["tests"]
 markers = [
     "integration: testes que fazem requisições reais à internet (use -m 'not integration' para pular)",
+    "database: testes de integração com o banco de dados"
 ]

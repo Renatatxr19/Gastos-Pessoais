@@ -13,7 +13,6 @@
   ```bash
   pip install --upgrade gastos-pessoais-cli
 
-
 ### 🚀 Como Executar
 1. Após a instalação, você pode iniciar a aplicação de qualquer diretório do seu terminal apenas digitando:
     ```bash

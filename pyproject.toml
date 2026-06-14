@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gastos-pessoais-cli"
-version = "1.0.1"
+version = "1.0.2"
 description = "Gerenciador simples de gastos pessoais via CLI"
 readme = "README.md"
 authors = [

@@ -1,3 +1,10 @@
+Perfeito! Com o arquivo do seu workflow em mãos, o ajuste fica super simples.
+
+Basta adicionar o passo pip install -e . logo após a instalação das dependências. Além disso, como você removeu o prefixo src. dos imports e o Setuptools vai fazer o auto-discovery da pasta raiz do pacote, é uma excelente prática rodar o pip install -e . para que o ambiente do Linux no GitHub Actions monte a estrutura exatamente como ela roda no mundo real.
+
+Aqui está o seu arquivo .github/workflows/ci.yml corrigido e pronto para colar:
+
+YAML
 name: CI Workflow
 
 on:
@@ -21,6 +28,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pytest requests
+      
+    - name: Instalar pacote local no modo editável
+      run: pip install -e .
         
     - name: Executar Testes (Pulando integração real se necessário)
       run: |

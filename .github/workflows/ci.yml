@@ -2,7 +2,7 @@ name: CI Workflow
 
 on:
   push:
-    branches: [ main, testes-pipeline-actions ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 

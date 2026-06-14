@@ -1,5 +1,5 @@
 import requests
-from src.gastos import (
+from gastos import (
     CATEGORIAS,
     adicionar_gasto,
     listar_gastos,

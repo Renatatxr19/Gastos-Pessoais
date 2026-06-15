@@ -1,10 +1,30 @@
 # 💰 Gerenciador de Gastos Pessoais
+[![CI Workflow](https://github.com/Renatatxr19/Gastos-Pessoais/actions/workflows/ci.yml/badge.svg)](https://github.com/Renatatxr19/Gastos-Pessoais/actions)
 
 ---
 
 ## 🔗 Deploy
 
-Aplicação publicada: *(adicione aqui o link do deploy quando disponível — Vercel/Render/etc.)*
+* **Aplicação publicada através do PyPI (Python Package Index)**
+* **Link para visualização web:** [pypi.org/project/gastos-pessoais-cli](https://pypi.org/project/gastos-pessoais-cli)
+
+### 📥 Instalação e Atualização
+
+* Para instalar a biblioteca ou garantir que você está utilizando a versão mais recente com todas as correções de caminhos, execute o comando abaixo no seu terminal:
+  ```bash
+  pip install --upgrade gastos-pessoais-cli
+
+### 🚀 Como Executar
+1. Após a instalação, você pode iniciar a aplicação de qualquer diretório do seu terminal apenas digitando:
+    ```bash
+    gastos
+
+**💡 Nota sobre o PATH (Caso o comando não seja encontrado):**
+Se o Windows emitir um alerta dizendo que o comando gastos não foi reconhecido, significa que a pasta de scripts do Python não está nas variáveis de ambiente do seu sistema.
+
+2. Você pode executar o CLI especificando o caminho completo do executável padrão do usuário:
+    ```bash
+    %APPDATA%\Python\Python314\Scripts\gastos.exe
 
 ---
 
@@ -62,12 +82,25 @@ Qualquer pessoa que queira controlar seus gastos de forma simples diretamente pe
 
 ---
 
-## 📦 Instalação
+## 🧪 Suíte de Testes Automatizados
 
-```bash
-git clone https://github.com/Renatatxr19/Gastos-Pessoais
-cd Gastos-Pessoais
-git checkout entrega-intermediaria
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -e ".[dev]"
+A aplicação conta com uma cobertura completa de testes automatizados utilizando o `pytest`, totalizando **25 cenários mapeados**:
+
+1. **Testes de Unidade**
+2. **Testes de Integração da API**
+3. **Testes de Integração do Banco de Dados**
+
+---
+
+## 🚀 Integração Contínua (GitHub Actions)
+
+A pipeline automatizada foi configurada para validar cada commit enviado ao repositório de forma independente.
+
+---
+
+## Integrantes do grupo
+
+- Renata Teixeira de Jesus
+- Pedro Silveira Newlands Machado
+
+

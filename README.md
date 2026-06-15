@@ -1,5 +1,6 @@
 # 💰 Gerenciador de Gastos Pessoais
 [![CI Workflow](https://github.com/Renatatxr19/Gastos-Pessoais/actions/workflows/ci.yml/badge.svg)](https://github.com/Renatatxr19/Gastos-Pessoais/actions)
+
 ---
 
 ## 🔗 Deploy
@@ -23,7 +24,7 @@ Se o Windows emitir um alerta dizendo que o comando gastos não foi reconhecido,
 
 2. Você pode executar o CLI especificando o caminho completo do executável padrão do usuário:
     ```bash
-    & %APPDATA%\Python\Python314\Scripts\gastos.exe
+    %APPDATA%\Python\Python314\Scripts\gastos.exe
 
 ---
 
@@ -94,5 +95,12 @@ A aplicação conta com uma cobertura completa de testes automatizados utilizand
 ## 🚀 Integração Contínua (GitHub Actions)
 
 A pipeline automatizada foi configurada para validar cada commit enviado ao repositório de forma independente.
+
+---
+
+## Integrantes do grupo
+
+- Renata Teixeira de Jesus
+- Pedro Silveira Newlands Machado
 
 
